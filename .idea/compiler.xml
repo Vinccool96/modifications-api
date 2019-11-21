@@ -6,8 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="modifications-api" />
         <module name="ModificationsApi" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ModificationsApi" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

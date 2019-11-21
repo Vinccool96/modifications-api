@@ -27,4 +27,30 @@ abstract public class MultipleModification<E, M extends ModificationBase<E>> ext
         return this.element;
     }
 
+    @Override
+    public void undo() {
+        for (M modification : this.getModifications()) {
+            modification.undo();
+        }
+    }
+
+    @Override
+    public void redo() {
+        for (M modification : this.getModifications()) {
+            modification.redo();
+        }
+    }
+
+    @Override
+    public boolean isUseful() {
+        boolean useful = true;
+        for (M modification : this.getModifications()) {
+            if (!modification.isUseful()) {
+                useful = false;
+                break;
+            }
+        }
+        return useful;
+    }
+
 }
