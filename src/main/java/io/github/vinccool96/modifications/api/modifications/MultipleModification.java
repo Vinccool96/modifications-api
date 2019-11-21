@@ -6,7 +6,7 @@ import java.util.List;
 
 abstract public class MultipleModification<E, M extends ModificationBase<E>> extends ModificationBase<ArrayList<M>> {
 
-    private MultipleModification(String description, ArrayList<M> element) {
+    public MultipleModification(String description, ArrayList<M> element) {
         super(description, element);
     }
 
