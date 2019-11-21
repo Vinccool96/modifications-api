@@ -8,6 +8,7 @@
     <artifactId>modifications-api</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Modifications Api</name>
+    <description>API for modification</description>
     <url>https://github.com/Vinccool96/modifications-api</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
